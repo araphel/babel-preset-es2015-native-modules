@@ -1,11 +1,11 @@
 var pluginList = require("babel-preset-es2015").plugins;
 
-// Assumption:
-// CommonJS plugin remains second to last in the list.
-// https://github.com/babel/babel/blob/master/packages/babel-preset-es2015/index.js#L22
-
-pluginList.splice(pluginList.length - 2, 1);
+for (var i = 0; i <= pluginList.length; i++) {
+  if (pluginList.slice(i, i+1).indexOf(require("babel-plugin-transform-es2015-modules-commonjs")) !== -1) {
+    pluginList.splice(i, 1);
+  }
+}
 
 module.exports = {
-	plugins: pluginList
+  plugins: pluginList
 };
