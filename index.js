@@ -34,7 +34,11 @@ es2015NativeModulesOnly = es2015PluginsWithCommonJs.filter(function (es2015Plugi
 });
 
 if (es2015PluginsWithCommonJs.length === es2015NativeModulesOnly.length) {
-  throw new Error('Failed to remove babel-plugin-transform-es2015-modules-commonjs from the preset.');
+  // throw new Error('Failed to remove babel-plugin-transform-es2015-modules-commonjs from the preset.');
+  /* In order to facilitate webpack-isomorphic-tools we will not throw an error but rather silent warning.
+   * Reason being that one might want to use native-modules mode and still have access to common modules
+   * on the development server at the same time. */
+  console.log('\nWarning: CommonJS modules detected - Strict ES6-modules mode disabled.\n');
 } else {
   // console.log('All Done!');
 }

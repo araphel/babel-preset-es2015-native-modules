@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-es2015-native-modules",
-  "version": "6.9.2",
+  "version": "6.9.3",
   "description": "Babel preset for all es2015 plugins but one, babel-plugin-transform-es2015-modules-commonjs",
   "main": "./index.js",
   "author": "Bartek Kus <bartekus@gmail.com> (http://bartekus.com/)",
