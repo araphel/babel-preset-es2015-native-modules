@@ -1,3 +1,13 @@
+# DEPRECATED NOTICE
+This preset is no longer necessary as the function that it performed can now be achieved natively.
+
+Instead of `es2015-native-modules` please use `es2015` with `{ "modules": false }` option:
+```
+presets: [
+  ["es2015", { "modules": false }]
+]
+```
+
 # babel-preset-es2015-native-modules
 
 ### **Babel preset for all es2015 plugins MINUS ONE:**
